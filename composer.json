@@ -1,5 +1,5 @@
 {
-    "name": "happy/installer",
+    "name": "haphp/installer",
     "require": {
         "php": "^8.1",
         "illuminate/filesystem": "^10.38",
