@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0d4a9406-e742-4caf-b3b2-cf3adc0f0e22" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/codeception.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/happyphp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/phpspec.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../monorepo-builder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/.idea/framework.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/vendor/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/vendor/composer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/vendor/composer/autoload_real.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../framework/vendor/composer/autoload_static.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/installer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/hphp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concerns/ConfiguresPrompts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NewCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NewCommandTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Pest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pint.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/../../composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2 Herd">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/../../vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/../../vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/../../vendor/composer" />
+      <path value="$PROJECT_DIR$/../../vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/../../vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/../../vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/../../vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/../../vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/../../vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/../../vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/../../vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/../../vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/../../vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/../../vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/../../vendor/illuminate/conditionable" />
+      <path value="$PROJECT_DIR$/../../vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/../../vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/../../vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/../../vendor/fidry/cpu-core-counter" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/../../vendor/laravel/pint" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/../../vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/../../vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/../../vendor/ta-tikoma/phpunit-architecture-test" />
+      <path value="$PROJECT_DIR$/../../vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/../../vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/../../vendor/psr/container" />
+      <path value="$PROJECT_DIR$/../../vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/../../vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/../../vendor/brianium/paratest" />
+      <path value="$PROJECT_DIR$/../../vendor/jean85/pretty-package-versions" />
+      <path value="$PROJECT_DIR$/../../vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/../../vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/../../vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/../../vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/../../vendor/pestphp/pest-plugin" />
+      <path value="$PROJECT_DIR$/../../vendor/pestphp/pest" />
+      <path value="$PROJECT_DIR$/../../vendor/symplify/monorepo-builder" />
+      <path value="$PROJECT_DIR$/../../vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/../../vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/../../vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/../../vendor/pestphp/pest-plugin-arch" />
+      <path value="$PROJECT_DIR$/../../vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/../../vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/../../vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/../../vendor/psr/log" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/../../vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/../../vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/brianium/paratest" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/ta-tikoma/phpunit-architecture-test" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/conditionable" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/vendor/jean85/pretty-package-versions" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/fidry/cpu-core-counter" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/pestphp/pest-plugin" />
+      <path value="$PROJECT_DIR$/vendor/pestphp/pest" />
+      <path value="$PROJECT_DIR$/vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/vendor/pestphp/pest-plugin-arch" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2a7AjiRZVWQMLkKhC0h0ro9syGu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Pest.NewCommandTest.php.executor": "Run",
+    "Pest.NewCommandTest.php::it can scaffold a new Happy application.executor": "Run",
+    "Pest.NewCommandTest.php::it can scaffold a new HappyPHP application.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.laravel-idea.update-module-directories": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php.composer",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Pest.NewCommandTest.php::it can scaffold a new Happy application">
+    <configuration name="Main" type="PestRunConfigurationType">
+      <option name="pestRunnerSettings">
+        <PestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="ConfigurationFile" use_alternative_configuration_file="true" />
+      </option>
+      <option name="runnerSettings">
+        <PhpTestRunnerSettings configuration_file="$PROJECT_DIR$/phpunit.xml" scope="ConfigurationFile" use_alternative_configuration_file="true" />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="NewCommandTest.php" type="PestRunConfigurationType" temporary="true">
+      <option name="pestRunnerSettings">
+        <PestRunner file="$PROJECT_DIR$/src/NewCommandTest.php" scope="File" />
+      </option>
+      <option name="runnerSettings">
+        <PhpTestRunnerSettings file="$PROJECT_DIR$/src/NewCommandTest.php" scope="File" />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="NewCommandTest.php::it can scaffold a new Happy application" type="PestRunConfigurationType" temporary="true">
+      <option name="pestRunnerSettings">
+        <PestRunner file="$PROJECT_DIR$/src/NewCommandTest.php" method="it can scaffold a new Happy application" scope="Method" />
+      </option>
+      <option name="runnerSettings">
+        <PhpTestRunnerSettings file="$PROJECT_DIR$/src/NewCommandTest.php" method="it can scaffold a new Happy application" scope="Method" />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="NewCommandTest.php::it can scaffold a new HappyPHP application" type="PestRunConfigurationType" temporary="true">
+      <option name="pestRunnerSettings">
+        <PestRunner file="$PROJECT_DIR$/src/NewCommandTest.php" method="it can scaffold a new HappyPHP application" scope="Method" />
+      </option>
+      <option name="runnerSettings">
+        <PhpTestRunnerSettings file="$PROJECT_DIR$/src/NewCommandTest.php" method="it can scaffold a new HappyPHP application" scope="Method" />
+      </option>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Pest.NewCommandTest.php::it can scaffold a new Happy application" />
+        <item itemvalue="Pest.NewCommandTest.php::it can scaffold a new HappyPHP application" />
+        <item itemvalue="Pest.NewCommandTest.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.297" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d4a9406-e742-4caf-b3b2-cf3adc0f0e22" name="Changes" comment="" />
+      <created>1703659380424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703659380424</updated>
+      <workItem from="1703659381450" duration="671000" />
+      <workItem from="1703660290206" duration="848000" />
+      <workItem from="1703661186059" duration="6893000" />
+      <workItem from="1703669374241" duration="58000" />
+      <workItem from="1703669502525" duration="527000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

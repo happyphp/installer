@@ -1,0 +1,29 @@
+{
+    "name": "happy/installer",
+    "require": {
+        "php": "^8.1",
+        "illuminate/filesystem": "^10.38",
+        "illuminate/support": "^10.38",
+        "laravel/prompts": "^0.1.13",
+        "symfony/console": "^7.0",
+        "symfony/process": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Happy\\Installer\\Console\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Happy\\Installer\\Console\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.28"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

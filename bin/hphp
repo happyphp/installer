@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+use HappyPHP\Installer\Console\NewCommand;
+
+if (file_exists(__DIR__.'/../../../autoload.php')) {
+    /** @noinspection PhpIncludeInspection */
+    require __DIR__.'/../../../autoload.php';
+} else {
+    require __DIR__.'/../vendor/autoload.php';
+}
+
+$app = new Symfony\Component\Console\Application('HappyPHP Installer', '1.0.0');
+$app->add(new NewCommand());
+
+/** @noinspection PhpUnhandledExceptionInspection */
+$app->run();
