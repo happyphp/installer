@@ -5,56 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d4a9406-e742-4caf-b3b2-cf3adc0f0e22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Support/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Support/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Support/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Support/.idea/support.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Support/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Support/AbstractServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Support/DefaultProviders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Support/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Support/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/.github/workflows/close-pull-request.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/.idea/contracts.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Console/KernelInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Container/BindingResolutionException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Container/ContainerInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Container/ContextualBindingBuilderInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Foundation/ApplicationInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Foundation/CachesConfigurationInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Foundation/CachesRoutesInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Foundation/ExceptionRendererInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Foundation/MaintenanceModeInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Http/KernelInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/Support/DeferrableProviderInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../contracts/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../framework/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../framework/smile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests-output/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.github/split.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.github/workflows/split.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.github/workflows/split.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/happyphp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/happyphp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../framework/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../framework/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/installer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/installer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewCommandTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewCommandTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +203,7 @@
       <workItem from="1703669374241" duration="58000" />
       <workItem from="1703669502525" duration="527000" />
       <workItem from="1703724926231" duration="3929000" />
-      <workItem from="1703729494907" duration="18563000" />
+      <workItem from="1703729494907" duration="19358000" />
     </task>
     <servers />
   </component>
