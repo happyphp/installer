@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../contracts/.idea/contracts.iml" filepath="$PROJECT_DIR$/../contracts/.idea/contracts.iml" />
       <module fileurl="file://$PROJECT_DIR$/../framework/.idea/framework.iml" filepath="$PROJECT_DIR$/../framework/.idea/framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../.idea/happyphp.iml" filepath="$PROJECT_DIR$/../../.idea/happyphp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/installer.iml" filepath="$PROJECT_DIR$/.idea/installer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../support/.idea/support.iml" filepath="$PROJECT_DIR$/../support/.idea/support.iml" />
     </modules>
   </component>
 </project>

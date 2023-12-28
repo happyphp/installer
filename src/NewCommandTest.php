@@ -8,7 +8,7 @@ use Symfony\Component\Console\Tester\CommandTester;
 
 it('can scaffold a new Happy application', function (): void {
     $scaffoldDirectoryName = 'tests-output/my-app';
-    $scaffoldDirectory = __DIR__ . '/../' . $scaffoldDirectoryName;
+    $scaffoldDirectory = __DIR__.'/../'.$scaffoldDirectoryName;
 
     if (file_exists($scaffoldDirectory)) {
         if (PHP_OS_FAMILY === 'Windows') {
@@ -26,6 +26,6 @@ it('can scaffold a new Happy application', function (): void {
     $statusCode = $tester->execute(['name' => $scaffoldDirectoryName], ['interactive' => false]);
 
     $this->assertSame(0, $statusCode);
-    $this->assertDirectoryExists($scaffoldDirectory . '/vendor');
-    $this->assertFileExists($scaffoldDirectory . '/.env');
+    $this->assertDirectoryExists($scaffoldDirectory.'/vendor');
+    $this->assertFileExists($scaffoldDirectory.'/.env');
 });

@@ -4,20 +4,22 @@ declare(strict_types=1);
 
 namespace Happy\Installer\Console;
 
-use RuntimeException;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Composer;
 use Illuminate\Support\ProcessUtils;
-use Illuminate\Filesystem\Filesystem;
-use Symfony\Component\Process\Process;
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Process\PhpExecutableFinder;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\OutputInterface;
-use function Laravel\Prompts\text;
-use function Laravel\Prompts\select;
+
 use function Laravel\Prompts\confirm;
+use function Laravel\Prompts\select;
+use function Laravel\Prompts\text;
+
+use RuntimeException;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Process\PhpExecutableFinder;
+use Symfony\Component\Process\Process;
 
 class NewCommand extends Command
 {
@@ -49,27 +51,27 @@ class NewCommand extends Command
 
         $this->configurePrompts($input, $output);
 
-        $output->write(PHP_EOL.'  <fg=red>:)</>'.PHP_EOL.PHP_EOL);
+        $output->write(PHP_EOL . '  <fg=red>:)</>' . PHP_EOL . PHP_EOL);
 
-        if (! $input->getArgument('name')) {
+        if ( ! $input->getArgument('name')) {
             $input->setArgument('name', text(
                 label: 'What is the name of your project?',
                 placeholder: 'E.g. example-app',
                 required: 'The project name is required.',
-                validate: fn ($value) => preg_match('/[^\pL\pN\-_.]/', $value) !== 0
+                validate: fn ($value) => 0 !== preg_match('/[^\pL\pN\-_.]/', $value)
                     ? 'The name may only contain letters, numbers, dashes, underscores, and periods.'
                     : null,
             ));
         }
 
-        if (! $input->getOption('phpunit') && ! $input->getOption('pest')) {
-            $input->setOption('pest', select(
-                    label: 'Which testing framework do you prefer?',
-                    options: ['PHPUnit', 'Pest'],
-                ) === 'Pest');
+        if ( ! $input->getOption('phpunit') && ! $input->getOption('pest')) {
+            $input->setOption('pest', 'Pest' === select(
+                label: 'Which testing framework do you prefer?',
+                options: ['PHPUnit', 'Pest'],
+            ));
         }
 
-        if (! $input->getOption('git') && $input->getOption('github') === false && Process::fromShellCommandline('git --version')->run() === 0) {
+        if ( ! $input->getOption('git') && false === $input->getOption('github') && 0 === Process::fromShellCommandline('git --version')->run()) {
             $input->setOption('git', confirm(label: 'Would you like to initialize a Git repository?', default: false));
         }
     }
@@ -78,44 +80,44 @@ class NewCommand extends Command
     {
         $name = $input->getArgument('name');
 
-        $directory = $name !== '.' ? getcwd().'/'.$name : '.';
+        $directory = '.' !== $name ? getcwd() . '/' . $name : '.';
 
         $this->composer = new Composer(new Filesystem(), $directory);
 
         $version = $this->getVersion($input);
 
-        if (! $input->getOption('force')) {
+        if ( ! $input->getOption('force')) {
             $this->verifyApplicationDoesntExist($directory);
         }
 
-        if ($input->getOption('force') && $directory === '.') {
+        if ($input->getOption('force') && '.' === $directory) {
             throw new RuntimeException('Cannot use --force option when using current directory for installation!');
         }
 
         $composer = $this->findComposer();
 
         $commands = [
-            $composer." create-project happy/happy \"$directory\" $version --remove-vcs --prefer-dist",
+            $composer . " create-project haphp/happy \"{$directory}\" {$version} --remove-vcs --prefer-dist --stability=dev",
         ];
 
-        if ($directory != '.' && $input->getOption('force')) {
-            if (PHP_OS_FAMILY == 'Windows') {
-                array_unshift($commands, "(if exist \"$directory\" rd /s /q \"$directory\")");
+        if ('.' !== $directory && $input->getOption('force')) {
+            if (PHP_OS_FAMILY === 'Windows') {
+                array_unshift($commands, "(if exist \"{$directory}\" rd /s /q \"{$directory}\")");
             } else {
-                array_unshift($commands, "rm -rf \"$directory\"");
+                array_unshift($commands, "rm -rf \"{$directory}\"");
             }
         }
 
-        if (PHP_OS_FAMILY != 'Windows') {
-            $commands[] = "chmod 755 \"$directory/happy\"";
+        if (PHP_OS_FAMILY !== 'Windows') {
+            $commands[] = "chmod 755 \"{$directory}/smile\"";
         }
 
         if (($process = $this->runCommands($commands, $input, $output))->isSuccessful()) {
-            if ($name !== '.') {
+            if ('.' !== $name) {
                 $this->replaceInFile(
                     'APP_URL=http://localhost',
-                    'APP_URL='.$this->generateAppUrl($name),
-                    $directory.'/.env'
+                    'APP_URL=' . $this->generateAppUrl($name),
+                    $directory . '/.env'
                 );
 
                 $database = $this->promptForDatabaseOptions($input);
@@ -123,16 +125,16 @@ class NewCommand extends Command
                 $this->configureDefaultDatabaseConnection($directory, $database, $name);
             }
 
-            if ($input->getOption('git') || $input->getOption('github') !== false) {
+            if ($input->getOption('git') || false !== $input->getOption('github')) {
                 $this->createRepository($directory, $input, $output);
             }
 
-            if ($input->getOption('github') !== false) {
+            if (false !== $input->getOption('github')) {
                 $this->pushToGitHub($name, $directory, $input, $output);
                 $output->writeln('');
             }
 
-            $output->writeln("  <bg=blue;fg=white> INFO </> Application ready in <options=bold>[{$name}]</>. Build something amazing.".PHP_EOL);
+            $output->writeln("  <bg=blue;fg=white> INFO </> Application ready in <options=bold>[{$name}]</>. Build something amazing." . PHP_EOL);
         }
 
         return $process->getExitCode();
@@ -151,21 +153,21 @@ class NewCommand extends Command
 
     protected function configureDefaultDatabaseConnection(string $directory, string $database, string $name): void
     {
-        if ($database === 'mariadb' && ! $this->hasMariaDBConfig($directory)) {
+        if ('mariadb' === $database && ! $this->hasMariaDBConfig($directory)) {
             $database = 'mysql';
         }
 
         $this->replaceInFile(
             'DB_CONNECTION=mysql',
-            'DB_CONNECTION='.$database,
-            $directory.'/.env'
+            'DB_CONNECTION=' . $database,
+            $directory . '/.env'
         );
 
-        if ($database != 'sqlite') {
+        if ('sqlite' !== $database) {
             $this->replaceInFile(
                 'DB_CONNECTION=mysql',
-                'DB_CONNECTION='.$database,
-                $directory.'/.env.example'
+                'DB_CONNECTION=' . $database,
+                $directory . '/.env.example'
             );
         }
 
@@ -177,11 +179,11 @@ class NewCommand extends Command
             'DB_PASSWORD=',
         ];
 
-        if ($database === 'sqlite') {
+        if ('sqlite' === $database) {
             $this->replaceInFile(
                 $defaults,
                 collect($defaults)->map(fn ($default) => "# {$default}")->all(),
-                $directory.'/.env'
+                $directory . '/.env'
             );
 
             return;
@@ -195,38 +197,38 @@ class NewCommand extends Command
         if (isset($defaultPorts[$database])) {
             $this->replaceInFile(
                 'DB_PORT=3306',
-                'DB_PORT='.$defaultPorts[$database],
-                $directory.'/.env'
+                'DB_PORT=' . $defaultPorts[$database],
+                $directory . '/.env'
             );
 
             $this->replaceInFile(
                 'DB_PORT=3306',
-                'DB_PORT='.$defaultPorts[$database],
-                $directory.'/.env.example'
+                'DB_PORT=' . $defaultPorts[$database],
+                $directory . '/.env.example'
             );
         }
 
         $this->replaceInFile(
             'DB_DATABASE=happy',
-            'DB_DATABASE='.str_replace('-', '_', strtolower($name)),
-            $directory.'/.env'
+            'DB_DATABASE=' . str_replace('-', '_', mb_strtolower($name)),
+            $directory . '/.env'
         );
 
         $this->replaceInFile(
             'DB_DATABASE=happy',
-            'DB_DATABASE='.str_replace('-', '_', strtolower($name)),
-            $directory.'/.env.example'
+            'DB_DATABASE=' . str_replace('-', '_', mb_strtolower($name)),
+            $directory . '/.env.example'
         );
     }
 
     protected function hasMariaDBConfig(string $directory): bool
     {
-        if (! file_exists($directory.'/config/database.php')) {
+        if ( ! file_exists($directory . '/config/database.php')) {
             return true;
         }
 
         return str_contains(
-            file_get_contents($directory.'/config/database.php'),
+            file_get_contents($directory . '/config/database.php'),
             "'mariadb' =>"
         );
     }
@@ -257,7 +259,7 @@ class NewCommand extends Command
         if ($this->removeComposerPackages(['phpunit/phpunit'], $output, true)
             && $this->requireComposerPackages(['pestphp/pest:^2.0', 'pestphp/pest-plugin-laravel:^2.0'], $output, true)) {
             $commands = array_filter([
-                $this->phpBinary().' ./vendor/bin/pest --init',
+                $this->phpBinary() . ' ./vendor/bin/pest --init',
             ]);
 
             $this->runCommands($commands, $input, $output, workingPath: $directory, env: [
@@ -266,12 +268,12 @@ class NewCommand extends Command
 
             $this->replaceFile(
                 'pest/Feature.php',
-                $directory.'/tests/Feature/ExampleTest.php',
+                $directory . '/tests/Feature/ExampleTest.php',
             );
 
             $this->replaceFile(
                 'pest/Unit.php',
-                $directory.'/tests/Unit/ExampleTest.php',
+                $directory . '/tests/Unit/ExampleTest.php',
             );
 
             $this->commitChanges('Install Pest', $directory, $input, $output);
@@ -294,13 +296,13 @@ class NewCommand extends Command
 
     protected function commitChanges(string $message, string $directory, InputInterface $input, OutputInterface $output): void
     {
-        if (! $input->getOption('git') && $input->getOption('github') === false) {
+        if ( ! $input->getOption('git') && false === $input->getOption('github')) {
             return;
         }
 
         $commands = [
             'git add .',
-            "git commit -q -m \"$message\"",
+            "git commit -q -m \"{$message}\"",
         ];
 
         $this->runCommands($commands, $input, $output, workingPath: $directory);
@@ -311,13 +313,13 @@ class NewCommand extends Command
         $process = new Process(['gh', 'auth', 'status']);
         $process->run();
 
-        if (! $process->isSuccessful()) {
-            $output->writeln('  <bg=yellow;fg=black> WARN </> Make sure the "gh" CLI tool is installed and that you\'re authenticated to GitHub. Skipping...'.PHP_EOL);
+        if ( ! $process->isSuccessful()) {
+            $output->writeln('  <bg=yellow;fg=black> WARN </> Make sure the "gh" CLI tool is installed and that you\'re authenticated to GitHub. Skipping...' . PHP_EOL);
 
             return;
         }
 
-        $name = $input->getOption('organization') ? $input->getOption('organization')."/$name" : $name;
+        $name = $input->getOption('organization') ? $input->getOption('organization') . "/{$name}" : $name;
         $flags = $input->getOption('github') ?: '--private';
 
         $commands = [
@@ -329,21 +331,21 @@ class NewCommand extends Command
 
     protected function verifyApplicationDoesntExist($directory): void
     {
-        if ((is_dir($directory) || is_file($directory)) && $directory != getcwd()) {
+        if ((is_dir($directory) || is_file($directory)) && $directory !== getcwd()) {
             throw new RuntimeException('Application already exists!');
         }
     }
 
     protected function generateAppUrl($name): string
     {
-        $hostname = mb_strtolower($name).'.test';
+        $hostname = mb_strtolower($name) . '.test';
 
-        return $this->canResolveHostname($hostname) ? 'http://'.$hostname : 'http://localhost';
+        return $this->canResolveHostname($hostname) ? 'http://' . $hostname : 'http://localhost';
     }
 
     protected function canResolveHostname($hostname): bool
     {
-        return gethostbyname($hostname.'.') !== $hostname.'.';
+        return gethostbyname($hostname . '.') !== $hostname . '.';
     }
 
     protected function getVersion(InputInterface $input): string
@@ -362,9 +364,9 @@ class NewCommand extends Command
 
     protected function phpBinary(): string
     {
-        $phpBinary = (new PhpExecutableFinder)->find(false);
+        $phpBinary = (new PhpExecutableFinder())->find(false);
 
-        return $phpBinary !== false
+        return false !== $phpBinary
             ? ProcessUtils::escapeArgument($phpBinary)
             : 'php';
     }
@@ -379,9 +381,9 @@ class NewCommand extends Command
         return $this->composer->removePackages($packages, $asDev, $output);
     }
 
-    protected function runCommands($commands, InputInterface $input, OutputInterface $output, string $workingPath = null, array $env = []): Process
+    protected function runCommands($commands, InputInterface $input, OutputInterface $output, ?string $workingPath = null, array $env = []): Process
     {
-        if (! $output->isDecorated()) {
+        if ( ! $output->isDecorated()) {
             $commands = array_map(function ($value) {
                 if (str_starts_with($value, 'chmod')) {
                     return $value;
@@ -391,7 +393,7 @@ class NewCommand extends Command
                     return $value;
                 }
 
-                return $value.' --no-ansi';
+                return $value . ' --no-ansi';
             }, $commands);
         }
 
@@ -405,7 +407,7 @@ class NewCommand extends Command
                     return $value;
                 }
 
-                return $value.' --quiet';
+                return $value . ' --quiet';
             }, $commands);
         }
 
@@ -415,12 +417,12 @@ class NewCommand extends Command
             try {
                 $process->setTty(true);
             } catch (RuntimeException $e) {
-                $output->writeln('  <bg=yellow;fg=black> WARN </> '.$e->getMessage().PHP_EOL);
+                $output->writeln('  <bg=yellow;fg=black> WARN </> ' . $e->getMessage() . PHP_EOL);
             }
         }
 
-        $process->run(function ($type, $line) use ($output) {
-            $output->write('    '.$line);
+        $process->run(function ($type, $line) use ($output): void {
+            $output->write('    ' . $line);
         });
 
         return $process;
@@ -428,11 +430,11 @@ class NewCommand extends Command
 
     protected function replaceFile(string $replace, string $file): void
     {
-        $stubs = dirname(__DIR__).'/stubs';
+        $stubs = dirname(__DIR__) . '/stubs';
 
         file_put_contents(
             $file,
-            file_get_contents("$stubs/$replace"),
+            file_get_contents("{$stubs}/{$replace}"),
         );
     }
 
