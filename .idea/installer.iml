@@ -7,10 +7,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="framework" />
-    <orderEntry type="module" module-name="contracts" />
-    <orderEntry type="module" module-name="contracts" />
-    <orderEntry type="module" module-name="support" />
-    <orderEntry type="module" module-name="happyphp" />
   </component>
 </module>

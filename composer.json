@@ -10,12 +10,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Happy\\Installer\\Console\\": "src/"
+            "Haphp\\Installer\\Console\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Happy\\Installer\\Console\\Tests\\": "tests/"
+            "Haphp\\Installer\\Console\\Tests\\": "tests/"
         }
     },
     "require-dev": {

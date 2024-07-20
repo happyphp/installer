@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Happy\Installer\Console\NewCommand;
+use Haphp\Installer\Console\NewCommand;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 

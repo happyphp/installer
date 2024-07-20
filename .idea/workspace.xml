@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d4a9406-e742-4caf-b3b2-cf3adc0f0e22" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../foundation/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../foundation/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../foundation/Application.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../foundation/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../foundation/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,18 +141,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.laravel-idea.update-module-directories": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/dluague/Sites/happyphp/happyphp",
+    "last_opened_file_path": "/Users/dluague/Sites/happyphp/happyphp/packages/foundation",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
     "settings.editor.selected.configurable": "php.test.frameworks.configurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../foundation" />
       <recent name="$PROJECT_DIR$/../.." />
       <recent name="$PROJECT_DIR$/../support" />
       <recent name="$PROJECT_DIR$/../contracts" />
@@ -203,7 +210,7 @@
       <workItem from="1703669374241" duration="58000" />
       <workItem from="1703669502525" duration="527000" />
       <workItem from="1703724926231" duration="3929000" />
-      <workItem from="1703729494907" duration="19358000" />
+      <workItem from="1703729494907" duration="22981000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Happy\Installer\Console\Tests;
+namespace Haphp\Installer\Console\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 

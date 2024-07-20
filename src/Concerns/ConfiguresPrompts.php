@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Happy\Installer\Console\Concerns;
+namespace Haphp\Installer\Console\Concerns;
 
 use Laravel\Prompts\ConfirmPrompt;
 use Laravel\Prompts\MultiSelectPrompt;
@@ -20,7 +20,7 @@ trait ConfiguresPrompts
 {
     protected function configurePrompts(InputInterface $input, OutputInterface $output): void
     {
-        Prompt::fallbackWhen( ! $input->isInteractive() || PHP_OS_FAMILY === 'Windows');
+        Prompt::fallbackWhen(! $input->isInteractive() || PHP_OS_FAMILY === 'Windows');
 
         TextPrompt::fallbackUsing(fn (TextPrompt $prompt) => $this->promptUntilValid(
             fn () => (new SymfonyStyle($input, $output))->ask($prompt->label, $prompt->default ?: null) ?? '',
@@ -51,7 +51,7 @@ trait ConfiguresPrompts
         ));
 
         MultiSelectPrompt::fallbackUsing(function (MultiSelectPrompt $prompt) use ($input, $output) {
-            if ([] !== $prompt->default) {
+            if ($prompt->default !== []) {
                 return $this->promptUntilValid(
                     fn () => (new SymfonyStyle($input, $output))->choice($prompt->label, $prompt->options, implode(',', $prompt->default), true),
                     $prompt->required,
@@ -98,8 +98,8 @@ trait ConfiguresPrompts
         while (true) {
             $result = $prompt();
 
-            if ($required && ('' === $result || [] === $result || false === $result)) {
-                $output->writeln('<error>' . (is_string($required) ? $required : 'Required.') . '</error>');
+            if ($required && ($result === '' || $result === [] || $result === false)) {
+                $output->writeln('<error>'.(is_string($required) ? $required : 'Required.').'</error>');
 
                 continue;
             }
